@@ -9,7 +9,7 @@
 
 ---
 
-[![Live Dashboard](https://img.shields.io/badge/🌾_Live_Dashboard-Open_App-FF4B4B?style=for-the-badge)]((https://bangladesh-agri-vulnerability.streamlit.app/))
+[![Live Dashboard](https://img.shields.io/badge/🌾_Live_Dashboard-Open_App-FF4B4B?style=for-the-badge)](https://bangladesh-agri-vulnerability.streamlit.app/))
 &nbsp;
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
 &nbsp;
