@@ -531,7 +531,7 @@ elif page == "District Explorer":
                 ),
                 height=380, margin=dict(t=40, b=20, l=20, r=20),
                 plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
-                legend=dict(bgcolor="rgba(15,17,23,0.75)", font=dict(color="#e2e8f0")),
+                legend=dict(bgcolor="rgba(0,0,0,0)", font=dict(color="#e2e8f0")),
                 xaxis_gridcolor="#e8f5e9",
             )
             st.plotly_chart(fig, use_container_width=True)
@@ -548,7 +548,7 @@ elif page == "District Explorer":
                 fig.update_layout(
                     height=380, margin=dict(t=40, b=20, l=20, r=20),
                     plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
-                    legend=dict(bgcolor="rgba(15,17,23,0.75)", font=dict(color="#e2e8f0")),
+                    legend=dict(bgcolor="rgba(0,0,0,0)", font=dict(color="#e2e8f0")),
                 )
                 st.plotly_chart(fig, use_container_width=True)
             else:
