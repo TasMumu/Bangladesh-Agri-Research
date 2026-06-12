@@ -148,23 +148,39 @@ def load_panel():
 
 @st.cache_data
 def load_geodata():
-    shp_candidates = [
+    # Try Silver parquet first (available on Streamlit Cloud)
+    silver_geo = SILVER / "silver_districts_geo.parquet"
+    if silver_geo.exists():
+        gdf = gpd.read_parquet(silver_geo)
+        col_map = {
+            "district_n": "district_name",
+            "division_n": "division_name",
+            "NAME_2":     "district_name",
+            "NAME_1":     "division_name",
+        }
+        gdf = gdf.rename(columns=col_map)
+        if gdf.crs is None:
+            gdf = gdf.set_crs("EPSG:4326")
+        elif gdf.crs.to_epsg() != 4326:
+            gdf = gdf.to_crs("EPSG:4326")
+        cols = [c for c in ["district_name","division_name","geometry"] if c in gdf.columns]
+        return gdf[cols]
+
+    # Fallback: Bronze shapefile (local machine only)
+    candidates = [
         ROOT / "data/bronze/gadm_shapefiles/bangladesh_districts_clean.shp",
         ROOT / "data/bronze/gadm_shapefiles/gadm41_BGD_2.shp",
     ]
-    shp_path = next((p for p in shp_candidates if p.exists()), None)
-    if shp_path is None:
+    shp = next((p for p in candidates if p.exists()), None)
+    if shp is None:
         return None
-    gdf = gpd.read_file(shp_path)
-    col_map = {
-        "district_n": "district_name", "division_n": "division_name",
-        "NAME_2": "district_name",     "NAME_1":     "division_name",
-    }
-    gdf = gdf.rename(columns=col_map).to_crs("EPSG:4326")
-    # Keep only the columns we need to avoid post-merge suffix collisions
-    keep = [c for c in ["district_name", "division_name", "geometry"] if c in gdf.columns]
-    return gdf[keep]
-
+    gdf = gpd.read_file(shp).rename(columns={
+        "district_n": "district_name",
+        "division_n": "division_name",
+        "NAME_2":     "district_name",
+        "NAME_1":     "division_name",
+    }).to_crs("EPSG:4326")
+    return gdf[[c for c in ["district_name","division_name","geometry"] if c in gdf.columns]]
 @st.cache_data
 def load_spatial_analysis():
     p = SILVER / "silver_spatial_analysis.parquet"
