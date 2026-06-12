@@ -1,6 +1,5 @@
 <div align="center">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg" height="52" alt="Flag of Bangladesh"/>
 
 # Climate-Driven Vulnerability of Boro Rice Yield
 ### Across Bangladesh's 64 Districts · 2001–2022
