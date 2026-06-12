@@ -288,7 +288,7 @@ The Streamlit dashboard (`dashboard.py`) provides an interactive interface for e
 | **Regression Findings** | Three-model comparison table, coefficient plot, Spatial Lag Model results, BBS robustness note |
 | **About** | Data sources, methodology summary, key findings, contact |
 
-**Live app:** [Bangladesh-Agri-Research.streamlit.app]("https://bangladesh-agri-vulnerability.streamlit.app/")
+**Live app:** [Bangladesh-Agri-Research.streamlit.app](https://bangladesh-agri-vulnerability.streamlit.app/)
 
 ---
 
