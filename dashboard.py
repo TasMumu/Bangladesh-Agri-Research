@@ -154,40 +154,58 @@ def load_panel():
     return df
 
 @st.cache_data
-d@st.cache_data
 def load_geodata():
-    # Try Silver parquet first — available on Streamlit Cloud
+    # Try Silver parquet first (available on Streamlit Cloud)
     silver_geo = SILVER / "silver_districts_geo.parquet"
     if silver_geo.exists():
         gdf = gpd.read_parquet(silver_geo)
+
+        # Rename only columns that actually exist — avoid creating duplicates
         if "district_name" not in gdf.columns:
             if "district_n" in gdf.columns:
                 gdf = gdf.rename(columns={"district_n": "district_name"})
             elif "NAME_2" in gdf.columns:
                 gdf = gdf.rename(columns={"NAME_2": "district_name"})
+
         if "division_name" not in gdf.columns:
             if "division_n" in gdf.columns:
                 gdf = gdf.rename(columns={"division_n": "division_name"})
             elif "NAME_1" in gdf.columns:
                 gdf = gdf.rename(columns={"NAME_1": "division_name"})
+
         if gdf.crs is None:
             gdf = gdf.set_crs("EPSG:4326")
         elif gdf.crs.to_epsg() != 4326:
             gdf = gdf.to_crs("EPSG:4326")
-        cols = [c for c in ["district_name", "division_name", "geometry"] if c in gdf.columns]
+
+        cols = [c for c in ["district_name", "division_name", "geometry"]
+                if c in gdf.columns]
         return gdf[cols]
-    # Fallback: Bronze shapefile (local only)
-    for p in [ROOT / "data/bronze/gadm_shapefiles/bangladesh_districts_clean.shp",
-              ROOT / "data/bronze/gadm_shapefiles/gadm41_BGD_2.shp"]:
-        if p.exists():
-            gdf = gpd.read_file(p)
-            if "district_name" not in gdf.columns:
-                gdf = gdf.rename(columns={"district_n":"district_name","NAME_2":"district_name"})
-            if "division_name" not in gdf.columns:
-                gdf = gdf.rename(columns={"division_n":"division_name","NAME_1":"division_name"})
-            gdf = gdf.to_crs("EPSG:4326")
-            return gdf[[c for c in ["district_name","division_name","geometry"] if c in gdf.columns]]
-    return None
+
+    # Fallback: Bronze shapefile (local machine only)
+    candidates = [
+        ROOT / "data/bronze/gadm_shapefiles/bangladesh_districts_clean.shp",
+        ROOT / "data/bronze/gadm_shapefiles/gadm41_BGD_2.shp",
+    ]
+    shp = next((p for p in candidates if p.exists()), None)
+    if shp is None:
+        return None
+    gdf = gpd.read_file(shp)
+    if "district_name" not in gdf.columns:
+        if "district_n" in gdf.columns:
+            gdf = gdf.rename(columns={"district_n": "district_name"})
+        elif "NAME_2" in gdf.columns:
+            gdf = gdf.rename(columns={"NAME_2": "district_name"})
+    if "division_name" not in gdf.columns:
+        if "division_n" in gdf.columns:
+            gdf = gdf.rename(columns={"division_n": "division_name"})
+        elif "NAME_1" in gdf.columns:
+            gdf = gdf.rename(columns={"NAME_1": "division_name"})
+    gdf = gdf.to_crs("EPSG:4326")
+    cols = [c for c in ["district_name", "division_name", "geometry"]
+            if c in gdf.columns]
+    return gdf[cols]
+    
 
 @st.cache_data
 def load_spatial_analysis():
