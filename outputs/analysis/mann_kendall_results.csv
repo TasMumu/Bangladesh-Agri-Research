@@ -1,0 +1,5 @@
+variable,label,trend,p_value,tau,sen_slope,significant
+yield_mt_ha,Boro Yield (MT/ha),increasing,2.3401411549661688e-05,0.6536796536796536,0.015146391470749032,True
+ndvi,NDVI,increasing,6.43195770910765e-06,0.696969696969697,0.004167338709677421,True
+temp_mean_c,Mean Temperature (°C),no trend,0.6077081401081053,-0.08571428571428572,-0.011574240412403165,False
+precip_total_mm,Total Precipitation (mm),no trend,0.975910003234818,0.009523809523809525,0.019690534770496558,False

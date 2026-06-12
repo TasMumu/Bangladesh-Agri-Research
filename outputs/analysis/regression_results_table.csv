@@ -1,0 +1,12 @@
+Variable,Model 1 coef,Model 1 SE,Model 2 coef,Model 2 SE,Model 3 coef,Model 3 SE
+NDVI anomaly,1.8952***,(0.6227),1.8802***,(0.6259),1.9249***,(0.6294)
+Precipitation anomaly (mm),-0.0004,(0.0009),-0.0004,(0.0009),-0.0004,(0.0009)
+Temperature anomaly (°C),0.0946**,(0.0463),0.0936**,(0.0460),0.0951**,(0.0461)
+Flood fraction,—,—,-0.0611,(0.1630),0.0373,(0.1729)
+Flood × High risk tier,—,—,—,—,-0.3493,(0.3582)
+R² (within),0.0255,,—,—,—,—
+Observations,"1,095",,—,—,—,—
+R² (within),—,—,0.0256,,—,—
+Observations,—,—,"1,095",,—,—
+R² (within),—,—,—,—,0.0266,
+Observations,—,—,—,—,"1,095",

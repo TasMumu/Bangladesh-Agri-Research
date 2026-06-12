@@ -1,0 +1,39 @@
+# ── Data directories (too large for GitHub) ───────────────────────
+data/
+outputs/maps/*.html
+
+# ── Python ────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Jupyter ───────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── Virtual environments ──────────────────────────────────────────
+venv/
+env/
+.env
+.venv
+
+# ── OS files ──────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ───────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+
+# ── Credentials (never commit these) ─────────────────────────────
+.cdsapirc
+*.cdsapirc
+secrets.toml
+.streamlit/secrets.toml

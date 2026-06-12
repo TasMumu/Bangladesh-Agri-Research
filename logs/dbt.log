@@ -1,0 +1,733 @@
+[0m22:16:13.457280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242C0A338C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242BC5F7610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242C2C97B10>]}
+
+
+============================== 22:16:13.466758 | 406f99ed-2223-4d18-b100-1e5e909d8fa1 ==============================
+[0m22:16:13.466758 [info ] [MainThread]: Running with dbt=1.11.8
+[0m22:16:13.467693 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Asus\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt init dbt_project', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m22:16:13.514257 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\Asus\.dbt
+[0m22:16:13.517318 [info ] [MainThread]: A project called dbt_project already exists here.
+[0m22:16:13.518692 [debug] [MainThread]: Command `dbt init` succeeded at 22:16:13.518518 after 0.31 seconds
+[0m22:16:13.519069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242C2D54180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242C2D71B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242C2CF4AF0>]}
+[0m22:16:13.519450 [debug] [MainThread]: Flushing usage events
+[0m22:16:15.749160 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:15:46.304054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F25FE338C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F25BA3F610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F262097B10>]}
+
+
+============================== 23:15:46.314446 | bf1165dc-6e7e-4b5b-a6ff-02a23d71ba3d ==============================
+[0m23:15:46.314446 [info ] [MainThread]: Running with dbt=1.11.8
+[0m23:15:46.316105 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Asus\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'E:\\Tasnim Docs\\Projects\\GIS Projects\\GIS Project\\BD_Rice_Climate\\bangladesh_agri\\logs'}
+[0m23:15:46.359356 [info ] [MainThread]: dbt version: 1.11.8
+[0m23:15:46.359948 [info ] [MainThread]: python version: 3.13.7
+[0m23:15:46.360537 [info ] [MainThread]: python path: C:\Users\Asus\AppData\Local\Programs\Python\Python313\python.exe
+[0m23:15:46.361005 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m23:15:46.494570 [info ] [MainThread]: Using profiles dir at C:\Users\Asus\.dbt
+[0m23:15:46.495502 [info ] [MainThread]: Using profiles.yml file at C:\Users\Asus\.dbt\profiles.yml
+[0m23:15:46.496244 [info ] [MainThread]: Using dbt_project.yml file at E:\Tasnim Docs\Projects\GIS Projects\GIS Project\BD_Rice_Climate\bangladesh_agri\dbt_project.yml
+[0m23:15:46.526005 [info ] [MainThread]: adapter type: duckdb
+[0m23:15:46.526928 [info ] [MainThread]: adapter version: 1.10.1
+[0m23:15:46.693352 [info ] [MainThread]: Configuration:
+[0m23:15:46.694144 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:15:46.694774 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:15:46.695461 [info ] [MainThread]: Required dependencies:
+[0m23:15:46.696154 [debug] [MainThread]: Executing "git --help"
+[0m23:15:46.725533 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:15:46.726022 [debug] [MainThread]: STDERR: "b''"
+[0m23:15:46.726317 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:15:46.726809 [info ] [MainThread]: Connection:
+[0m23:15:46.727475 [info ] [MainThread]:   database: dev
+[0m23:15:46.728176 [info ] [MainThread]:   schema: main
+[0m23:15:46.728855 [info ] [MainThread]:   path: dev.duckdb
+[0m23:15:46.729474 [info ] [MainThread]:   config_options: None
+[0m23:15:46.730006 [info ] [MainThread]:   extensions: None
+[0m23:15:46.730482 [info ] [MainThread]:   settings: {}
+[0m23:15:46.730881 [info ] [MainThread]:   external_root: .
+[0m23:15:46.731249 [info ] [MainThread]:   use_credential_provider: None
+[0m23:15:46.731574 [info ] [MainThread]:   attach: None
+[0m23:15:46.731856 [info ] [MainThread]:   filesystems: None
+[0m23:15:46.732129 [info ] [MainThread]:   remote: None
+[0m23:15:46.732529 [info ] [MainThread]:   plugins: None
+[0m23:15:46.733031 [info ] [MainThread]:   disable_transactions: False
+[0m23:15:46.733794 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m23:15:47.295485 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m23:15:53.199498 [debug] [MainThread]: Using duckdb connection "debug"
+[0m23:15:53.199935 [debug] [MainThread]: On debug: select 1 as id
+[0m23:15:53.200219 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:15:53.236795 [debug] [MainThread]: SQL status: OK in 0.036 seconds
+[0m23:15:53.238563 [debug] [MainThread]: On debug: Close
+[0m23:15:53.239009 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m23:15:53.239606 [info ] [MainThread]: [32mAll checks passed![0m
+[0m23:15:53.240650 [debug] [MainThread]: Command `dbt debug` succeeded at 23:15:53.240529 after 7.28 seconds
+[0m23:15:53.240948 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:15:53.241242 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F2623C3360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F2624C5C70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F26236B020>]}
+[0m23:15:53.241578 [debug] [MainThread]: Flushing usage events
+[0m23:15:55.467859 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:18:35.573977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289B0E738C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289ACA6F610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289B30D7B10>]}
+
+
+============================== 23:18:35.580853 | 9417f163-b5f0-41de-afa9-8951fdfc8e10 ==============================
+[0m23:18:35.580853 [info ] [MainThread]: Running with dbt=1.11.8
+[0m23:18:35.581725 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Asus\\.dbt', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'E:\\Tasnim Docs\\Projects\\GIS Projects\\GIS Project\\BD_Rice_Climate\\bangladesh_agri\\logs'}
+[0m23:18:35.612248 [info ] [MainThread]: dbt version: 1.11.8
+[0m23:18:35.612837 [info ] [MainThread]: python version: 3.13.7
+[0m23:18:35.613453 [info ] [MainThread]: python path: C:\Users\Asus\AppData\Local\Programs\Python\Python313\python.exe
+[0m23:18:35.613863 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m23:18:35.772162 [info ] [MainThread]: Using profiles dir at C:\Users\Asus\.dbt
+[0m23:18:35.773293 [info ] [MainThread]: Using profiles.yml file at C:\Users\Asus\.dbt\profiles.yml
+[0m23:18:35.774596 [info ] [MainThread]: Using dbt_project.yml file at E:\Tasnim Docs\Projects\GIS Projects\GIS Project\BD_Rice_Climate\bangladesh_agri\dbt_project.yml
+[0m23:18:35.778156 [info ] [MainThread]: adapter type: duckdb
+[0m23:18:35.778975 [info ] [MainThread]: adapter version: 1.10.1
+[0m23:18:35.944586 [info ] [MainThread]: Configuration:
+[0m23:18:35.945773 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:18:35.946757 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:18:35.947568 [info ] [MainThread]: Required dependencies:
+[0m23:18:35.948369 [debug] [MainThread]: Executing "git --help"
+[0m23:18:35.986823 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:18:35.987461 [debug] [MainThread]: STDERR: "b''"
+[0m23:18:35.987956 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:18:35.988776 [info ] [MainThread]: Connection:
+[0m23:18:35.989455 [info ] [MainThread]:   database: dev
+[0m23:18:35.989910 [info ] [MainThread]:   schema: main
+[0m23:18:35.990519 [info ] [MainThread]:   path: dev.duckdb
+[0m23:18:35.991176 [info ] [MainThread]:   config_options: None
+[0m23:18:35.991859 [info ] [MainThread]:   extensions: None
+[0m23:18:35.992593 [info ] [MainThread]:   settings: {}
+[0m23:18:35.993368 [info ] [MainThread]:   external_root: .
+[0m23:18:35.994108 [info ] [MainThread]:   use_credential_provider: None
+[0m23:18:35.994820 [info ] [MainThread]:   attach: None
+[0m23:18:35.995517 [info ] [MainThread]:   filesystems: None
+[0m23:18:35.996195 [info ] [MainThread]:   remote: None
+[0m23:18:35.996866 [info ] [MainThread]:   plugins: None
+[0m23:18:35.997503 [info ] [MainThread]:   disable_transactions: False
+[0m23:18:35.998732 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m23:18:36.279432 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m23:18:36.370879 [debug] [MainThread]: Using duckdb connection "debug"
+[0m23:18:36.371335 [debug] [MainThread]: On debug: select 1 as id
+[0m23:18:36.371640 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:18:36.420019 [debug] [MainThread]: SQL status: OK in 0.048 seconds
+[0m23:18:36.421273 [debug] [MainThread]: On debug: Close
+[0m23:18:36.421731 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m23:18:36.422466 [info ] [MainThread]: [32mAll checks passed![0m
+[0m23:18:36.423909 [debug] [MainThread]: Command `dbt debug` succeeded at 23:18:36.423757 after 1.05 seconds
+[0m23:18:36.424400 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:18:36.424883 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289B34BB360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289B35C5C70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289B3463020>]}
+[0m23:18:36.425312 [debug] [MainThread]: Flushing usage events
+[0m23:18:38.931419 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:27:13.403630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF10DC38C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF0C9D3610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF13027B10>]}
+
+
+============================== 23:27:13.410634 | e161b865-a92a-4192-872a-dd04b0e2188a ==============================
+[0m23:27:13.410634 [info ] [MainThread]: Running with dbt=1.11.8
+[0m23:27:13.411542 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Asus\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'E:\\Tasnim Docs\\Projects\\GIS Projects\\GIS Project\\BD_Rice_Climate\\bangladesh_agri\\logs'}
+[0m23:27:13.436294 [info ] [MainThread]: dbt version: 1.11.8
+[0m23:27:13.436996 [info ] [MainThread]: python version: 3.13.7
+[0m23:27:13.437448 [info ] [MainThread]: python path: C:\Users\Asus\AppData\Local\Programs\Python\Python313\python.exe
+[0m23:27:13.437942 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m23:27:13.581722 [info ] [MainThread]: Using profiles dir at C:\Users\Asus\.dbt
+[0m23:27:13.582415 [info ] [MainThread]: Using profiles.yml file at C:\Users\Asus\.dbt\profiles.yml
+[0m23:27:13.582825 [info ] [MainThread]: Using dbt_project.yml file at E:\Tasnim Docs\Projects\GIS Projects\GIS Project\BD_Rice_Climate\bangladesh_agri\dbt_project.yml
+[0m23:27:13.585264 [info ] [MainThread]: adapter type: duckdb
+[0m23:27:13.585784 [info ] [MainThread]: adapter version: 1.10.1
+[0m23:27:13.746236 [info ] [MainThread]: Configuration:
+[0m23:27:13.747020 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:27:13.747792 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:27:13.748339 [info ] [MainThread]: Required dependencies:
+[0m23:27:13.749013 [debug] [MainThread]: Executing "git --help"
+[0m23:27:13.771578 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:27:13.772156 [debug] [MainThread]: STDERR: "b''"
+[0m23:27:13.772610 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:27:13.773341 [info ] [MainThread]: Connection:
+[0m23:27:13.774309 [info ] [MainThread]:   database: dev
+[0m23:27:13.774930 [info ] [MainThread]:   schema: main
+[0m23:27:13.775636 [info ] [MainThread]:   path: dev.duckdb
+[0m23:27:13.776630 [info ] [MainThread]:   config_options: None
+[0m23:27:13.777256 [info ] [MainThread]:   extensions: None
+[0m23:27:13.778070 [info ] [MainThread]:   settings: {}
+[0m23:27:13.778656 [info ] [MainThread]:   external_root: .
+[0m23:27:13.779165 [info ] [MainThread]:   use_credential_provider: None
+[0m23:27:13.779667 [info ] [MainThread]:   attach: None
+[0m23:27:13.780283 [info ] [MainThread]:   filesystems: None
+[0m23:27:13.780887 [info ] [MainThread]:   remote: None
+[0m23:27:13.781373 [info ] [MainThread]:   plugins: None
+[0m23:27:13.781833 [info ] [MainThread]:   disable_transactions: False
+[0m23:27:13.782499 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m23:27:14.092514 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m23:27:14.183429 [debug] [MainThread]: Using duckdb connection "debug"
+[0m23:27:14.183816 [debug] [MainThread]: On debug: select 1 as id
+[0m23:27:14.184115 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:27:14.206415 [debug] [MainThread]: SQL status: OK in 0.022 seconds
+[0m23:27:14.207522 [debug] [MainThread]: On debug: Close
+[0m23:27:14.207919 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m23:27:14.208611 [info ] [MainThread]: [32mAll checks passed![0m
+[0m23:27:14.209792 [debug] [MainThread]: Command `dbt debug` succeeded at 23:27:14.209658 after 1.04 seconds
+[0m23:27:14.210121 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:27:14.210456 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF1342B360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF13535C70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF133BF020>]}
+[0m23:27:14.210875 [debug] [MainThread]: Flushing usage events
+[0m23:27:17.021656 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:28:07.579041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE2E1E38C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE29E2F610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE30447B10>]}
+
+
+============================== 23:28:07.588402 | 2d423be5-1f2e-4ec0-9504-32709fd892c4 ==============================
+[0m23:28:07.588402 [info ] [MainThread]: Running with dbt=1.11.8
+[0m23:28:07.589775 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Asus\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'E:\\Tasnim Docs\\Projects\\GIS Projects\\GIS Project\\BD_Rice_Climate\\bangladesh_agri\\logs'}
+[0m23:28:07.637708 [info ] [MainThread]: dbt version: 1.11.8
+[0m23:28:07.638475 [info ] [MainThread]: python version: 3.13.7
+[0m23:28:07.639203 [info ] [MainThread]: python path: C:\Users\Asus\AppData\Local\Programs\Python\Python313\python.exe
+[0m23:28:07.639950 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m23:28:07.778505 [info ] [MainThread]: Using profiles dir at C:\Users\Asus\.dbt
+[0m23:28:07.779495 [info ] [MainThread]: Using profiles.yml file at C:\Users\Asus\.dbt\profiles.yml
+[0m23:28:07.780333 [info ] [MainThread]: Using dbt_project.yml file at E:\Tasnim Docs\Projects\GIS Projects\GIS Project\BD_Rice_Climate\bangladesh_agri\dbt_project.yml
+[0m23:28:07.785858 [info ] [MainThread]: adapter type: duckdb
+[0m23:28:07.786921 [info ] [MainThread]: adapter version: 1.10.1
+[0m23:28:07.991261 [info ] [MainThread]: Configuration:
+[0m23:28:07.992213 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:28:07.992994 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:28:07.993746 [info ] [MainThread]: Required dependencies:
+[0m23:28:07.994536 [debug] [MainThread]: Executing "git --help"
+[0m23:28:08.018762 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:28:08.019372 [debug] [MainThread]: STDERR: "b''"
+[0m23:28:08.019796 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:28:08.020344 [info ] [MainThread]: Connection:
+[0m23:28:08.020746 [info ] [MainThread]:   database: dev
+[0m23:28:08.021121 [info ] [MainThread]:   schema: main
+[0m23:28:08.021523 [info ] [MainThread]:   path: dev.duckdb
+[0m23:28:08.021907 [info ] [MainThread]:   config_options: None
+[0m23:28:08.022283 [info ] [MainThread]:   extensions: None
+[0m23:28:08.022809 [info ] [MainThread]:   settings: {}
+[0m23:28:08.023208 [info ] [MainThread]:   external_root: .
+[0m23:28:08.023644 [info ] [MainThread]:   use_credential_provider: None
+[0m23:28:08.024022 [info ] [MainThread]:   attach: None
+[0m23:28:08.024392 [info ] [MainThread]:   filesystems: None
+[0m23:28:08.024683 [info ] [MainThread]:   remote: None
+[0m23:28:08.025034 [info ] [MainThread]:   plugins: None
+[0m23:28:08.025390 [info ] [MainThread]:   disable_transactions: False
+[0m23:28:08.026000 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m23:28:08.308441 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m23:28:08.367958 [debug] [MainThread]: Using duckdb connection "debug"
+[0m23:28:08.368366 [debug] [MainThread]: On debug: select 1 as id
+[0m23:28:08.368640 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:28:08.384207 [debug] [MainThread]: SQL status: OK in 0.015 seconds
+[0m23:28:08.385187 [debug] [MainThread]: On debug: Close
+[0m23:28:08.385574 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m23:28:08.386113 [info ] [MainThread]: [32mAll checks passed![0m
+[0m23:28:08.387132 [debug] [MainThread]: Command `dbt debug` succeeded at 23:28:08.387001 after 0.98 seconds
+[0m23:28:08.387448 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:28:08.387760 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE30773360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE30871C70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE306EF020>]}
+[0m23:28:08.388134 [debug] [MainThread]: Flushing usage events
+[0m23:28:11.012109 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:31:59.036212 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CC8BD38C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CC4803610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CCAE37C50>]}
+
+
+============================== 23:31:59.043807 | f64ecca3-40e7-44c2-b8ac-5625af982480 ==============================
+[0m23:31:59.043807 [info ] [MainThread]: Running with dbt=1.11.8
+[0m23:31:59.044925 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Asus\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'E:\\Tasnim Docs\\Projects\\GIS Projects\\GIS Project\\BD_Rice_Climate\\bangladesh_agri\\logs'}
+[0m23:31:59.923744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f64ecca3-40e7-44c2-b8ac-5625af982480', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CC914B100>]}
+[0m23:32:00.062196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f64ecca3-40e7-44c2-b8ac-5625af982480', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CCAE70C00>]}
+[0m23:32:00.066245 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m23:32:00.543365 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m23:32:00.544682 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:32:00.545663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f64ecca3-40e7-44c2-b8ac-5625af982480', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CCAF53650>]}
+[0m23:32:05.097949 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f64ecca3-40e7-44c2-b8ac-5625af982480', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CCB4AF980>]}
+[0m23:32:05.204529 [debug] [MainThread]: Wrote artifact WritableManifest to E:\Tasnim Docs\Projects\GIS Projects\GIS Project\BD_Rice_Climate\bangladesh_agri\target\manifest.json
+[0m23:32:05.348266 [debug] [MainThread]: Wrote artifact SemanticManifest to E:\Tasnim Docs\Projects\GIS Projects\GIS Project\BD_Rice_Climate\bangladesh_agri\target\semantic_manifest.json
+[0m23:32:05.392530 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f64ecca3-40e7-44c2-b8ac-5625af982480', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CCB87F770>]}
+[0m23:32:05.393407 [info ] [MainThread]: Found 2 models, 4 data tests, 475 macros
+[0m23:32:05.394685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f64ecca3-40e7-44c2-b8ac-5625af982480', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CCB4D28F0>]}
+[0m23:32:05.398581 [info ] [MainThread]: 
+[0m23:32:05.399791 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:32:05.400696 [info ] [MainThread]: 
+[0m23:32:05.401713 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m23:32:05.409537 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m23:32:05.514508 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m23:32:05.515018 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m23:32:05.515413 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:32:05.567359 [debug] [ThreadPool]: SQL status: OK in 0.052 seconds
+[0m23:32:05.570995 [debug] [ThreadPool]: On list_dev: Close
+[0m23:32:05.572536 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m23:32:05.573749 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m23:32:05.584520 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m23:32:05.585135 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m23:32:05.585606 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:32:05.588680 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m23:32:05.590983 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m23:32:05.591600 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m23:32:05.592486 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:32:05.593005 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m23:32:05.593661 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m23:32:05.597014 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m23:32:05.598656 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m23:32:05.599276 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m23:32:05.599807 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m23:32:05.601132 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m23:32:05.601782 [debug] [ThreadPool]: On create_dev_main: Close
+[0m23:32:05.604705 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m23:32:05.613250 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m23:32:05.613819 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m23:32:05.615108 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:32:05.616026 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m23:32:05.616532 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m23:32:05.616972 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m23:32:05.637667 [debug] [ThreadPool]: SQL status: OK in 0.020 seconds
+[0m23:32:05.640286 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m23:32:05.663549 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m23:32:05.664275 [debug] [ThreadPool]: On list_dev_main: Close
+[0m23:32:05.666352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f64ecca3-40e7-44c2-b8ac-5625af982480', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CCB8EF4D0>]}
+[0m23:32:05.667379 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:32:05.668205 [debug] [MainThread]: On master: BEGIN
+[0m23:32:05.668761 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:32:05.669879 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:32:05.670460 [debug] [MainThread]: On master: COMMIT
+[0m23:32:05.670931 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:32:05.671429 [debug] [MainThread]: On master: COMMIT
+[0m23:32:05.672266 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:32:05.672803 [debug] [MainThread]: On master: Close
+[0m23:32:05.727438 [debug] [Thread-1 (]: Began running node model.bangladesh_agri.my_first_dbt_model
+[0m23:32:05.728524 [info ] [Thread-1 (]: 1 of 2 START sql table model main.my_first_dbt_model ........................... [RUN]
+[0m23:32:05.730118 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.bangladesh_agri.my_first_dbt_model'
+[0m23:32:05.730792 [debug] [Thread-1 (]: Began compiling node model.bangladesh_agri.my_first_dbt_model
+[0m23:32:05.743957 [debug] [Thread-1 (]: Writing injected SQL for node "model.bangladesh_agri.my_first_dbt_model"
+[0m23:32:05.749773 [debug] [Thread-1 (]: Began executing node model.bangladesh_agri.my_first_dbt_model
+[0m23:32:05.806885 [debug] [Thread-1 (]: Writing runtime sql for node "model.bangladesh_agri.my_first_dbt_model"
+[0m23:32:05.810714 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_first_dbt_model"
+[0m23:32:05.811450 [debug] [Thread-1 (]: On model.bangladesh_agri.my_first_dbt_model: BEGIN
+[0m23:32:05.812057 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:32:05.813427 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:32:05.814077 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_first_dbt_model"
+[0m23:32:05.814659 [debug] [Thread-1 (]: On model.bangladesh_agri.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "node_id": "model.bangladesh_agri.my_first_dbt_model"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."my_first_dbt_model__dbt_tmp"
+  
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+  
+[0m23:32:05.834545 [debug] [Thread-1 (]: SQL status: OK in 0.019 seconds
+[0m23:32:05.845255 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_first_dbt_model"
+[0m23:32:05.846047 [debug] [Thread-1 (]: On model.bangladesh_agri.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "node_id": "model.bangladesh_agri.my_first_dbt_model"} */
+alter table "dev"."main"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m23:32:05.848941 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m23:32:05.878842 [debug] [Thread-1 (]: On model.bangladesh_agri.my_first_dbt_model: COMMIT
+[0m23:32:05.879691 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_first_dbt_model"
+[0m23:32:05.880303 [debug] [Thread-1 (]: On model.bangladesh_agri.my_first_dbt_model: COMMIT
+[0m23:32:05.890592 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m23:32:05.901287 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_first_dbt_model"
+[0m23:32:05.902317 [debug] [Thread-1 (]: On model.bangladesh_agri.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "node_id": "model.bangladesh_agri.my_first_dbt_model"} */
+
+      drop table if exists "dev"."main"."my_first_dbt_model__dbt_backup" cascade
+    
+[0m23:32:05.905527 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m23:32:05.910074 [debug] [Thread-1 (]: On model.bangladesh_agri.my_first_dbt_model: Close
+[0m23:32:05.915007 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f64ecca3-40e7-44c2-b8ac-5625af982480', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CCB8D9F40>]}
+[0m23:32:05.916327 [info ] [Thread-1 (]: 1 of 2 OK created sql table model main.my_first_dbt_model ...................... [[32mOK[0m in 0.18s]
+[0m23:32:05.917952 [debug] [Thread-1 (]: Finished running node model.bangladesh_agri.my_first_dbt_model
+[0m23:32:05.919715 [debug] [Thread-1 (]: Began running node model.bangladesh_agri.my_second_dbt_model
+[0m23:32:05.920604 [info ] [Thread-1 (]: 2 of 2 START sql view model main.my_second_dbt_model ........................... [RUN]
+[0m23:32:05.921820 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.bangladesh_agri.my_first_dbt_model, now model.bangladesh_agri.my_second_dbt_model)
+[0m23:32:05.922462 [debug] [Thread-1 (]: Began compiling node model.bangladesh_agri.my_second_dbt_model
+[0m23:32:05.926488 [debug] [Thread-1 (]: Writing injected SQL for node "model.bangladesh_agri.my_second_dbt_model"
+[0m23:32:05.928078 [debug] [Thread-1 (]: Began executing node model.bangladesh_agri.my_second_dbt_model
+[0m23:32:05.956215 [debug] [Thread-1 (]: Writing runtime sql for node "model.bangladesh_agri.my_second_dbt_model"
+[0m23:32:05.958463 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_second_dbt_model"
+[0m23:32:05.959130 [debug] [Thread-1 (]: On model.bangladesh_agri.my_second_dbt_model: BEGIN
+[0m23:32:05.959621 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:32:05.960659 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:32:05.961269 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_second_dbt_model"
+[0m23:32:05.961800 [debug] [Thread-1 (]: On model.bangladesh_agri.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "node_id": "model.bangladesh_agri.my_second_dbt_model"} */
+
+  
+  create view "dev"."main"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "dev"."main"."my_first_dbt_model"
+where id = 1
+  );
+
+[0m23:32:05.964247 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m23:32:05.969334 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_second_dbt_model"
+[0m23:32:05.970124 [debug] [Thread-1 (]: On model.bangladesh_agri.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "node_id": "model.bangladesh_agri.my_second_dbt_model"} */
+alter view "dev"."main"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m23:32:05.971591 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:32:05.974342 [debug] [Thread-1 (]: On model.bangladesh_agri.my_second_dbt_model: COMMIT
+[0m23:32:05.975063 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_second_dbt_model"
+[0m23:32:05.975920 [debug] [Thread-1 (]: On model.bangladesh_agri.my_second_dbt_model: COMMIT
+[0m23:32:05.978974 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m23:32:05.982549 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_second_dbt_model"
+[0m23:32:05.983135 [debug] [Thread-1 (]: On model.bangladesh_agri.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "node_id": "model.bangladesh_agri.my_second_dbt_model"} */
+
+      drop view if exists "dev"."main"."my_second_dbt_model__dbt_backup" cascade
+    
+[0m23:32:05.984264 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:32:05.986851 [debug] [Thread-1 (]: On model.bangladesh_agri.my_second_dbt_model: Close
+[0m23:32:05.987773 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f64ecca3-40e7-44c2-b8ac-5625af982480', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CCCC74EB0>]}
+[0m23:32:05.988838 [info ] [Thread-1 (]: 2 of 2 OK created sql view model main.my_second_dbt_model ...................... [[32mOK[0m in 0.07s]
+[0m23:32:05.990545 [debug] [Thread-1 (]: Finished running node model.bangladesh_agri.my_second_dbt_model
+[0m23:32:05.993143 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:32:05.993981 [debug] [MainThread]: On master: BEGIN
+[0m23:32:05.994857 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:32:05.995999 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:32:05.996740 [debug] [MainThread]: On master: COMMIT
+[0m23:32:05.997309 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:32:05.997777 [debug] [MainThread]: On master: COMMIT
+[0m23:32:05.998595 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:32:05.999153 [debug] [MainThread]: On master: Close
+[0m23:32:05.999820 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:32:06.000796 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m23:32:06.001221 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m23:32:06.002160 [debug] [MainThread]: Connection 'model.bangladesh_agri.my_second_dbt_model' was properly closed.
+[0m23:32:06.002608 [info ] [MainThread]: 
+[0m23:32:06.003378 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 0.60 seconds (0.60s).
+[0m23:32:06.004766 [debug] [MainThread]: Command end result
+[0m23:32:06.046169 [debug] [MainThread]: Wrote artifact WritableManifest to E:\Tasnim Docs\Projects\GIS Projects\GIS Project\BD_Rice_Climate\bangladesh_agri\target\manifest.json
+[0m23:32:06.049788 [debug] [MainThread]: Wrote artifact SemanticManifest to E:\Tasnim Docs\Projects\GIS Projects\GIS Project\BD_Rice_Climate\bangladesh_agri\target\semantic_manifest.json
+[0m23:32:06.062635 [debug] [MainThread]: Wrote artifact RunExecutionResult to E:\Tasnim Docs\Projects\GIS Projects\GIS Project\BD_Rice_Climate\bangladesh_agri\target\run_results.json
+[0m23:32:06.063410 [info ] [MainThread]: 
+[0m23:32:06.064841 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:32:06.065932 [info ] [MainThread]: 
+[0m23:32:06.067216 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m23:32:06.069326 [debug] [MainThread]: Command `dbt run` succeeded at 23:32:06.069080 after 7.27 seconds
+[0m23:32:06.070047 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CCB814CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CCB7566D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016CCAEFDD30>]}
+[0m23:32:06.070677 [debug] [MainThread]: Flushing usage events
+[0m23:32:09.928629 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:33:56.241246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED0BD138C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED0793F610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED0DF77C50>]}
+
+
+============================== 23:33:56.247224 | 86f906a5-d0a2-443a-8ce1-d8be2e991a1c ==============================
+[0m23:33:56.247224 [info ] [MainThread]: Running with dbt=1.11.8
+[0m23:33:56.248537 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Asus\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'E:\\Tasnim Docs\\Projects\\GIS Projects\\GIS Project\\BD_Rice_Climate\\bangladesh_agri\\logs'}
+[0m23:33:56.797250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '86f906a5-d0a2-443a-8ce1-d8be2e991a1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED0C28B100>]}
+[0m23:33:56.943729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '86f906a5-d0a2-443a-8ce1-d8be2e991a1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED0DFACC00>]}
+[0m23:33:56.948676 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m23:33:57.334131 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m23:33:57.648745 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:33:57.649453 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:33:57.649791 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:33:57.714198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '86f906a5-d0a2-443a-8ce1-d8be2e991a1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED0E592050>]}
+[0m23:33:57.834211 [debug] [MainThread]: Wrote artifact WritableManifest to E:\Tasnim Docs\Projects\GIS Projects\GIS Project\BD_Rice_Climate\bangladesh_agri\target\manifest.json
+[0m23:33:57.837628 [debug] [MainThread]: Wrote artifact SemanticManifest to E:\Tasnim Docs\Projects\GIS Projects\GIS Project\BD_Rice_Climate\bangladesh_agri\target\semantic_manifest.json
+[0m23:33:57.862578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '86f906a5-d0a2-443a-8ce1-d8be2e991a1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED0CE4FF20>]}
+[0m23:33:57.863432 [info ] [MainThread]: Found 2 models, 4 data tests, 475 macros
+[0m23:33:57.864571 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '86f906a5-d0a2-443a-8ce1-d8be2e991a1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED0E2ED390>]}
+[0m23:33:57.867958 [info ] [MainThread]: 
+[0m23:33:57.869117 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:33:57.870223 [info ] [MainThread]: 
+[0m23:33:57.871678 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m23:33:57.880485 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m23:33:57.996660 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m23:33:57.997231 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m23:33:57.997674 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:33:58.049116 [debug] [ThreadPool]: SQL status: OK in 0.051 seconds
+[0m23:33:58.050805 [debug] [ThreadPool]: On list_dev: Close
+[0m23:33:58.051949 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m23:33:58.052853 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m23:33:58.063985 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m23:33:58.065032 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m23:33:58.065981 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:33:58.067744 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m23:33:58.069927 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m23:33:58.070487 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m23:33:58.071401 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:33:58.072141 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m23:33:58.072678 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m23:33:58.073602 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:33:58.075080 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m23:33:58.075660 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m23:33:58.076168 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m23:33:58.077000 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:33:58.077571 [debug] [ThreadPool]: On create_dev_main: Close
+[0m23:33:58.080088 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m23:33:58.089029 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m23:33:58.090348 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m23:33:58.090830 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:33:58.091856 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m23:33:58.092411 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m23:33:58.092851 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m23:33:58.100386 [debug] [ThreadPool]: SQL status: OK in 0.007 seconds
+[0m23:33:58.102393 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m23:33:58.104260 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m23:33:58.104811 [debug] [ThreadPool]: On list_dev_main: Close
+[0m23:33:58.106648 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '86f906a5-d0a2-443a-8ce1-d8be2e991a1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED0EA646D0>]}
+[0m23:33:58.107460 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:33:58.107928 [debug] [MainThread]: On master: BEGIN
+[0m23:33:58.108350 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:33:58.109135 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:33:58.109584 [debug] [MainThread]: On master: COMMIT
+[0m23:33:58.110111 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:33:58.110661 [debug] [MainThread]: On master: COMMIT
+[0m23:33:58.111417 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:33:58.111900 [debug] [MainThread]: On master: Close
+[0m23:33:58.118971 [debug] [Thread-1 (]: Began running node model.bangladesh_agri.my_first_dbt_model
+[0m23:33:58.120059 [info ] [Thread-1 (]: 1 of 2 START sql table model main.my_first_dbt_model ........................... [RUN]
+[0m23:33:58.121692 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.bangladesh_agri.my_first_dbt_model'
+[0m23:33:58.122358 [debug] [Thread-1 (]: Began compiling node model.bangladesh_agri.my_first_dbt_model
+[0m23:33:58.135260 [debug] [Thread-1 (]: Writing injected SQL for node "model.bangladesh_agri.my_first_dbt_model"
+[0m23:33:58.136920 [debug] [Thread-1 (]: Began executing node model.bangladesh_agri.my_first_dbt_model
+[0m23:33:58.192099 [debug] [Thread-1 (]: Writing runtime sql for node "model.bangladesh_agri.my_first_dbt_model"
+[0m23:33:58.193863 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_first_dbt_model"
+[0m23:33:58.194622 [debug] [Thread-1 (]: On model.bangladesh_agri.my_first_dbt_model: BEGIN
+[0m23:33:58.195207 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:33:58.196656 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:33:58.197399 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_first_dbt_model"
+[0m23:33:58.198317 [debug] [Thread-1 (]: On model.bangladesh_agri.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "node_id": "model.bangladesh_agri.my_first_dbt_model"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."my_first_dbt_model__dbt_tmp"
+  
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+  
+[0m23:33:58.200790 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m23:33:58.210391 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_first_dbt_model"
+[0m23:33:58.211121 [debug] [Thread-1 (]: On model.bangladesh_agri.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "node_id": "model.bangladesh_agri.my_first_dbt_model"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'my_first_dbt_model'
+  
+[0m23:33:58.212686 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:33:58.214678 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_first_dbt_model"
+[0m23:33:58.215659 [debug] [Thread-1 (]: On model.bangladesh_agri.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "node_id": "model.bangladesh_agri.my_first_dbt_model"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'my_first_dbt_model'
+  
+[0m23:33:58.225317 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m23:33:58.239440 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_first_dbt_model"
+[0m23:33:58.240263 [debug] [Thread-1 (]: On model.bangladesh_agri.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "node_id": "model.bangladesh_agri.my_first_dbt_model"} */
+alter table "dev"."main"."my_first_dbt_model" rename to "my_first_dbt_model__dbt_backup"
+[0m23:33:58.241716 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:33:58.246285 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_first_dbt_model"
+[0m23:33:58.246944 [debug] [Thread-1 (]: On model.bangladesh_agri.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "node_id": "model.bangladesh_agri.my_first_dbt_model"} */
+alter table "dev"."main"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m23:33:58.248229 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:33:58.278319 [debug] [Thread-1 (]: On model.bangladesh_agri.my_first_dbt_model: COMMIT
+[0m23:33:58.279014 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_first_dbt_model"
+[0m23:33:58.279815 [debug] [Thread-1 (]: On model.bangladesh_agri.my_first_dbt_model: COMMIT
+[0m23:33:58.285680 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m23:33:58.294514 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_first_dbt_model"
+[0m23:33:58.295124 [debug] [Thread-1 (]: On model.bangladesh_agri.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "node_id": "model.bangladesh_agri.my_first_dbt_model"} */
+
+      drop table if exists "dev"."main"."my_first_dbt_model__dbt_backup" cascade
+    
+[0m23:33:58.298556 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m23:33:58.302751 [debug] [Thread-1 (]: On model.bangladesh_agri.my_first_dbt_model: Close
+[0m23:33:58.306660 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '86f906a5-d0a2-443a-8ce1-d8be2e991a1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED0EB14410>]}
+[0m23:33:58.307769 [info ] [Thread-1 (]: 1 of 2 OK created sql table model main.my_first_dbt_model ...................... [[32mOK[0m in 0.18s]
+[0m23:33:58.309283 [debug] [Thread-1 (]: Finished running node model.bangladesh_agri.my_first_dbt_model
+[0m23:33:58.310476 [debug] [Thread-1 (]: Began running node model.bangladesh_agri.my_second_dbt_model
+[0m23:33:58.311274 [info ] [Thread-1 (]: 2 of 2 START sql view model main.my_second_dbt_model ........................... [RUN]
+[0m23:33:58.312393 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.bangladesh_agri.my_first_dbt_model, now model.bangladesh_agri.my_second_dbt_model)
+[0m23:33:58.313036 [debug] [Thread-1 (]: Began compiling node model.bangladesh_agri.my_second_dbt_model
+[0m23:33:58.318301 [debug] [Thread-1 (]: Writing injected SQL for node "model.bangladesh_agri.my_second_dbt_model"
+[0m23:33:58.319920 [debug] [Thread-1 (]: Began executing node model.bangladesh_agri.my_second_dbt_model
+[0m23:33:58.356129 [debug] [Thread-1 (]: Writing runtime sql for node "model.bangladesh_agri.my_second_dbt_model"
+[0m23:33:58.357671 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_second_dbt_model"
+[0m23:33:58.358202 [debug] [Thread-1 (]: On model.bangladesh_agri.my_second_dbt_model: BEGIN
+[0m23:33:58.358617 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:33:58.359443 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:33:58.359876 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_second_dbt_model"
+[0m23:33:58.360247 [debug] [Thread-1 (]: On model.bangladesh_agri.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "node_id": "model.bangladesh_agri.my_second_dbt_model"} */
+
+  
+  create view "dev"."main"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "dev"."main"."my_first_dbt_model"
+where id = 1
+  );
+
+[0m23:33:58.361184 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:33:58.365007 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_second_dbt_model"
+[0m23:33:58.365524 [debug] [Thread-1 (]: On model.bangladesh_agri.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "node_id": "model.bangladesh_agri.my_second_dbt_model"} */
+alter view "dev"."main"."my_second_dbt_model" rename to "my_second_dbt_model__dbt_backup"
+[0m23:33:58.366596 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:33:58.369945 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_second_dbt_model"
+[0m23:33:58.370426 [debug] [Thread-1 (]: On model.bangladesh_agri.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "node_id": "model.bangladesh_agri.my_second_dbt_model"} */
+alter view "dev"."main"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m23:33:58.371238 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:33:58.373263 [debug] [Thread-1 (]: On model.bangladesh_agri.my_second_dbt_model: COMMIT
+[0m23:33:58.373745 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_second_dbt_model"
+[0m23:33:58.374151 [debug] [Thread-1 (]: On model.bangladesh_agri.my_second_dbt_model: COMMIT
+[0m23:33:58.379035 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m23:33:58.381877 [debug] [Thread-1 (]: Using duckdb connection "model.bangladesh_agri.my_second_dbt_model"
+[0m23:33:58.382434 [debug] [Thread-1 (]: On model.bangladesh_agri.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "bangladesh_agri", "target_name": "dev", "node_id": "model.bangladesh_agri.my_second_dbt_model"} */
+
+      drop view if exists "dev"."main"."my_second_dbt_model__dbt_backup" cascade
+    
+[0m23:33:58.385019 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m23:33:58.386645 [debug] [Thread-1 (]: On model.bangladesh_agri.my_second_dbt_model: Close
+[0m23:33:58.387678 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '86f906a5-d0a2-443a-8ce1-d8be2e991a1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED0E5EEF10>]}
+[0m23:33:58.388900 [info ] [Thread-1 (]: 2 of 2 OK created sql view model main.my_second_dbt_model ...................... [[32mOK[0m in 0.08s]
+[0m23:33:58.390118 [debug] [Thread-1 (]: Finished running node model.bangladesh_agri.my_second_dbt_model
+[0m23:33:58.391729 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:33:58.392176 [debug] [MainThread]: On master: BEGIN
+[0m23:33:58.392530 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:33:58.393433 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:33:58.393861 [debug] [MainThread]: On master: COMMIT
+[0m23:33:58.394226 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:33:58.394566 [debug] [MainThread]: On master: COMMIT
+[0m23:33:58.395497 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:33:58.395906 [debug] [MainThread]: On master: Close
+[0m23:33:58.396350 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:33:58.396676 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m23:33:58.396993 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m23:33:58.397281 [debug] [MainThread]: Connection 'model.bangladesh_agri.my_second_dbt_model' was properly closed.
+[0m23:33:58.397668 [info ] [MainThread]: 
+[0m23:33:58.399152 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 0.53 seconds (0.53s).
+[0m23:33:58.400764 [debug] [MainThread]: Command end result
+[0m23:33:58.557539 [debug] [MainThread]: Wrote artifact WritableManifest to E:\Tasnim Docs\Projects\GIS Projects\GIS Project\BD_Rice_Climate\bangladesh_agri\target\manifest.json
+[0m23:33:58.561544 [debug] [MainThread]: Wrote artifact SemanticManifest to E:\Tasnim Docs\Projects\GIS Projects\GIS Project\BD_Rice_Climate\bangladesh_agri\target\semantic_manifest.json
+[0m23:33:58.573733 [debug] [MainThread]: Wrote artifact RunExecutionResult to E:\Tasnim Docs\Projects\GIS Projects\GIS Project\BD_Rice_Climate\bangladesh_agri\target\run_results.json
+[0m23:33:58.574255 [info ] [MainThread]: 
+[0m23:33:58.574956 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:33:58.575595 [info ] [MainThread]: 
+[0m23:33:58.576197 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m23:33:58.577476 [debug] [MainThread]: Command `dbt run` succeeded at 23:33:58.577314 after 2.56 seconds
+[0m23:33:58.577934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED0E35B390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED0E6634A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED09CBEAD0>]}
+[0m23:33:58.578375 [debug] [MainThread]: Flushing usage events
+[0m23:34:01.848967 [debug] [MainThread]: An error was encountered while trying to flush usage events

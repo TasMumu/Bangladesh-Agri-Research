@@ -1,0 +1,116 @@
+name: bangladesh_agri
+version: "1.0.0"
+profile: bangladesh_agri
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+
+models:
+  bangladesh_agri:
+    staging:
+      materialized: view
+    marts:
+      materialized: table
+
+-- dbt_project/models/staging/stg_ndvi.sql
+-- Staging model: load Silver NDVI parquet into DuckDB view
+
+SELECT
+    district_name_clean                     AS district_name,
+    year,
+    season,
+    ROUND(mean_ndvi, 4)                     AS ndvi,
+    ROUND(ndvi_anomaly, 4)                  AS ndvi_anomaly,
+    ROUND(ndvi_district_mean, 4)            AS ndvi_long_term_mean
+FROM read_parquet('{{ env_var("SILVER_PATH", "../data/silver") }}/silver_ndvi_districts.parquet')
+WHERE district_name_clean IS NOT NULL
+  AND mean_ndvi BETWEEN -1 AND 1
+
+  -- dbt_project/models/staging/stg_climate.sql
+
+SELECT
+    district_name_clean                     AS district_name,
+    year,
+    season,
+    ROUND(temp_mean_c, 2)                   AS temp_mean_c,
+    ROUND(temp_max_c, 2)                    AS temp_max_c,
+    ROUND(precip_total_mm, 1)               AS precip_total_mm,
+    ROUND(precip_max_month_mm, 1)           AS precip_max_month_mm,
+    n_months
+FROM read_parquet('{{ env_var("SILVER_PATH", "../data/silver") }}/silver_climate_seasonal.parquet')
+WHERE district_name_clean IS NOT NULL
+
+-- dbt_project/models/staging/stg_fao_national.sql
+
+SELECT
+    year,
+    ROUND(yield_kg_per_ha, 0)               AS national_yield_kg_per_ha,
+    ROUND(area_harvested_ha, 0)             AS national_area_ha,
+    ROUND(production_tonnes, 0)             AS national_production_tonnes
+FROM read_parquet('{{ env_var("SILVER_PATH", "../data/silver") }}/silver_fao_national_yield.parquet')
+
+-- dbt_project/models/staging/stg_dim_district.sql
+
+SELECT
+    district_code,
+    division_name,
+    district_name_clean                     AS district_name,
+    ROUND(area_km2, 1)                      AS area_km2
+FROM read_parquet('{{ env_var("SILVER_PATH", "../data/silver") }}/silver_dim_district.parquet')
+
+
+-- dbt_project/models/marts/fact_district_season.sql
+-- Gold fact table: one row per district per season per year
+-- This is the table all analysis in Phase 5 runs on.
+
+WITH ndvi    AS (SELECT * FROM {{ ref('stg_ndvi') }}),
+     climate AS (SELECT * FROM {{ ref('stg_climate') }}),
+     nat     AS (SELECT * FROM {{ ref('stg_fao_national') }}),
+     districts AS (SELECT * FROM {{ ref('stg_dim_district') }})
+
+SELECT
+    -- Keys
+    d.district_code,
+    d.division_name,
+    n.district_name,
+    n.year,
+    n.season,
+
+    -- Geography
+    d.area_km2,
+
+    -- NDVI (crop health proxy)
+    n.ndvi,
+    n.ndvi_anomaly,
+    n.ndvi_long_term_mean,
+
+    -- Climate
+    c.temp_mean_c,
+    c.temp_max_c,
+    c.precip_total_mm,
+    c.precip_max_month_mm,
+
+    -- National benchmark (for comparison)
+    nat.national_yield_kg_per_ha,
+
+    -- Derived: rainfall anomaly vs district long-term mean
+    c.precip_total_mm - AVG(c.precip_total_mm) OVER (
+        PARTITION BY n.district_name, n.season
+    )                                           AS precip_anomaly_mm,
+
+    -- Derived: temperature anomaly
+    c.temp_mean_c - AVG(c.temp_mean_c) OVER (
+        PARTITION BY n.district_name, n.season
+    )                                           AS temp_anomaly_c,
+
+    -- Metadata
+    CURRENT_TIMESTAMP                           AS dbt_updated_at
+
+FROM ndvi n
+LEFT JOIN climate  c   ON n.district_name = c.district_name
+                       AND n.year         = c.year
+                       AND n.season       = c.season
+LEFT JOIN districts d  ON n.district_name = d.district_name
+LEFT JOIN nat          ON n.year          = nat.year
+
+WHERE n.year BETWEEN 2001 AND 2023
