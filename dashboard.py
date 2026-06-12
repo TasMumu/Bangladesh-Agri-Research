@@ -493,7 +493,7 @@ elif page == "District Explorer":
                     tickfont=dict(color="#1565c0"),
                     overlaying="y", side="right",
                 ),
-                legend=dict(x=0.01, y=0.99, bgcolor="rgba(15,17,23,0.75)", font=dict(color="#e2e8f0"), bordercolor="rgba(255,255,255,0.1)", borderwidth=1),
+                legend=dict(x=0.01, y=0.99, bgcolor="rgba(0,0,0,0)", font=dict(color="#e2e8f0"), bordercolor="rgba(255,255,255,0.1)", borderwidth=1),
                 height=380, margin=dict(t=40, b=20, l=20, r=20),
                 plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
                 xaxis=dict(showgrid=True, gridcolor="#e8f5e9"),
