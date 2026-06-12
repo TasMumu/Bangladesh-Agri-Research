@@ -37,3 +37,12 @@ desktop.ini
 *.cdsapirc
 secrets.toml
 .streamlit/secrets.toml
+
+# dbt artifacts
+target/
+logs/
+dev.duckdb
+dbt_project.yml
+
+# Claude local config
+.claude/
