@@ -46,3 +46,6 @@ dbt_project.yml
 
 # Claude local config
 .claude/
+# v2 build scratch
+v2/paper/_render/
+v2/logs/*.md5
