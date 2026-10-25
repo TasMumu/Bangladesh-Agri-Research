@@ -49,3 +49,5 @@ dbt_project.yml
 # v2 build scratch
 v2/paper/_render/
 v2/logs/*.md5
+# v2 pipeline data is versioned (the top-level data/ rule would hide it)
+!v2/data/
